@@ -22,11 +22,11 @@
 <body class="body-3">
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-3 w-nav">
     <div class="containerprimul w-container">
-      <a href="/" aria-current="page" class="w-nav-brand w--current"><img src="static/images/Logo-Acwo24.png" loading="lazy" width="123" sizes="123px" alt="" srcset="static/images/Logo-Acwo24-p-500.png 500w, static/images/Logo-Acwo24-p-800.png 800w, static/images/Logo-Acwo24.png 1080w" class="logo"></a>
+      <a href="/loggedin" aria-current="page" class="w-nav-brand w--current"><img src="static/images/Logo-Acwo24.png" loading="lazy" width="123" sizes="123px" alt="" srcset="static/images/Logo-Acwo24-p-500.png 500w, static/images/Logo-Acwo24-p-800.png 800w, static/images/Logo-Acwo24.png 1080w" class="logo"></a>
       <nav role="navigation" class="w-nav-menu">
         <a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a>
         <a href="#quiz" class="nav-link-2 w-nav-link">Rules</a>
-        <a href="/login" class="nav-link-2 cta w-nav-link">Login</a>
+        <a href="/logout" class="nav-link-2 cta w-nav-link">Logout</a>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -36,8 +36,9 @@
   <section class="section-5">
     <div class="w-layout-blockcontainer herocontainer w-container">
       <h1 class="heading-3">AIRCRAFT WORKSHOP 2024</h1>
+        <p>Hello, {{ username }}!</p>
       <p class="hero-paragraph">Eveniment din cadrul EUROAVIA-Bucuresti dedicat aeromodelismului. Timp de trei zile, vei avea ocazia să înveți concepte teoretice, dar și să-ți construiești propriul aeromodel.</p>
-      <a href="/quiz" class="major-button w-button">Attempt Quiz</a><img src="static/images/MODEL-Brosura-AcWo.png" loading="lazy" sizes="100vw" srcset="static/images/MODEL-Brosura-AcWo-p-500.png 500w, static/images/MODEL-Brosura-AcWo-p-800.png 800w, static/images/MODEL-Brosura-AcWo-p-1080.png 1080w, static/images/MODEL-Brosura-AcWo-p-1600.png 1600w, static/images/MODEL-Brosura-AcWo.png 2000w" alt="" class="image-3">
+      <a href="/quiz" class="major-button w-button">Attempt Quiz {{username}}</a><img src="static/images/MODEL-Brosura-AcWo.png" loading="lazy" sizes="100vw" srcset="static/images/MODEL-Brosura-AcWo-p-500.png 500w, static/images/MODEL-Brosura-AcWo-p-800.png 800w, static/images/MODEL-Brosura-AcWo-p-1080.png 1080w, static/images/MODEL-Brosura-AcWo-p-1600.png 1600w, static/images/MODEL-Brosura-AcWo.png 2000w" alt="" class="image-3">
     </div>
   </section>
   <section>
