@@ -4,17 +4,22 @@ import json
 def read_credentials(path: str = "auth.json"):
     with open(path, 'r') as file:
         creds = json.loads(file.read())['teams']
+        print(creds)
         return creds
-        # print(creds)
 
-def check_password(creds: list):
-    name = request.form["name"]
-    password = "TaviMatei"
+def check_password(username, password):
+    creds = read_credentials()
     for i in creds:
-        if password==i['password']:
-            print("Bravo!")
+        if i['user']==username:
+            if i['password']==password:
+                return True
+    return False
 
 
 if __name__ == '__main__':
-    creds = read_credentials()
-    check_password(creds)
+    user = input("Dati userul:")
+    password=input("Dati parola:")
+    if check_password(user,password)==True:
+        print("corect")
+    else:
+        print("nu")
