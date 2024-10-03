@@ -1,181 +1,181 @@
 [
     {
-        "question1": "Ce forma a aripii confera rezistenta indusa minima?",
-        "optionA": "Trapezoidala",
-        "optionB": "Dreptunghiulara",
-        "optionC": "Eliptica",
-        "optionD": "Dreapta",
+        "1": "Ce forma a aripii confera rezistenta indusa minima?",
+        "A": "Trapezoidala",
+        "B": "Dreptunghiulara",
+        "C": "Eliptica",
+        "D": "Dreapta",
         "answer": "Eliptica"
     },
 
     {
-        "question2": "V din formula portantei reprezinta:",
-        "optionA": "Wole Soyinka",
-        "optionB": "William Shakespeare",
-        "optionC": "Ngozi Chimamanda Adichie",
-        "optionD": "Dan Brown",
+        "2": "V din formula portantei reprezinta:",
+        "A": "Wole Soyinka",
+        "B": "William Shakespeare",
+        "C": "Ngozi Chimamanda Adichie",
+        "D": "Dan Brown",
         "answer": "William Shakespeare"
     },
 
     {
-        "question3": "What did the crocodile swallow in Peter Pan?",
-        "optionA": "A Book",
-        "optionB": "A Computer",
-        "optionC": "A pair of shoes",
-        "optionD": "Alarm Clock",
+        "3": "What did the crocodile swallow in Peter Pan?",
+        "A": "A Book",
+        "B": "A Computer",
+        "C": "A pair of shoes",
+        "D": "Alarm Clock",
         "answer": "Alarm Clock"
     },
 
     {
-        "question4": "Which is the only mammal that can’t jump?",
-        "optionA": "Dog",
-        "optionB": "Elephant",
-        "optionC": "Goat",
-        "optionD": "Lion",
+        "4": "Which is the only mammal that can’t jump?",
+        "A": "Dog",
+        "B": "Elephant",
+        "C": "Goat",
+        "D": "Lion",
         "answer": "Elephant"
     },
 
     {
-        "question5": "Who lived at 221B, Baker Street, London?",
-        "optionA": "Tony Stark",
-        "optionB": "Morgan Freeman",
-        "optionC": "Sherlock Holmes",
-        "optionD": "Samuel L. Jackson",
+        "5": "Who lived at 221B, Baker Street, London?",
+        "A": "Tony Stark",
+        "B": "Morgan Freeman",
+        "C": "Sherlock Holmes",
+        "D": "Samuel L. Jackson",
         "answer": "Sherlock Holmes"
     },
 
     {
-        "question6": "What colour is a panda?",
-        "optionA": "Green and Yellow",
-        "optionB": "Blue and Red",
-        "optionC": "Green and White",
-        "optionD": "Black and White",
+        "6": "What colour is a panda?",
+        "A": "Green and Yellow",
+        "B": "Blue and Red",
+        "C": "Green and White",
+        "D": "Black and White",
         "answer": "Black and White"
     },
 
     {
-        "question7": "Where is the smallest bone in the human body?",
-        "optionA": "The Chest",
-        "optionB": "The Ear",
-        "optionC": "The Legs",
-        "optionD": "The Hands",
+        "7": "Where is the smallest bone in the human body?",
+        "A": "The Chest",
+        "B": "The Ear",
+        "C": "The Legs",
+        "D": "The Hands",
         "answer": "The Ear"
     },
 
     {
-        "question8": "What does the roman numeral C represent?",
-        "optionA": "100",
-        "optionB": "10",
-        "optionC": "10,000",
-        "optionD": "1,000,000",
+        "8": "What does the roman numeral C represent?",
+        "A": "100",
+        "B": "10",
+        "C": "10,000",
+        "D": "1,000,000",
         "answer": "100"
     },
 
     {
-        "question9": "What takes place in Hong Kong's Happy Valley?",
-        "optionA": "Chicken Wrestling",
-        "optionB": "Horse racing",
-        "optionC": "Street Racing",
-        "optionD": "Arm Wrestling",
+        "9": "What takes place in Hong Kong's Happy Valley?",
+        "A": "Chicken Wrestling",
+        "B": "Horse racing",
+        "C": "Street Racing",
+        "D": "Arm Wrestling",
         "answer": "Horse racing"
     },
 
     {
-        "question10": "Who painted the Mona Lisa?",
-        "optionA": "Alexander Graham Bell",
-        "optionB": "Sir Isaac Newton",
-        "optionC": "Leonardo Da Vinci",
-        "optionD": "Albert Einstein",
+        "10": "Who painted the Mona Lisa?",
+        "A": "Alexander Graham Bell",
+        "B": "Sir Isaac Newton",
+        "C": "Leonardo Da Vinci",
+        "D": "Albert Einstein",
         "answer": "Leonardo Da Vinci"
     },
 
     {
-        "question11": "What’s the most important book in the Moslem religion?",
-        "optionA": "The Koran",
-        "optionB": "The Dictionary",
-        "optionC": "The Bible",
-        "optionD": "The Chemistry text Book",
+        "11": "What’s the most important book in the Moslem religion?",
+        "A": "The Koran",
+        "B": "The Dictionary",
+        "C": "The Bible",
+        "D": "The Chemistry text Book",
         "answer": "The Koran"
     },
 
     {
-        "question12": "What’s the capital of Ethiopia?",
-        "optionA": "Cape Town",
-        "optionB": "San Francisco",
-        "optionC": "Abuja",
-        "optionD": "Syndey",
+        "12": "What’s the capital of Ethiopia?",
+        "A": "Cape Town",
+        "B": "San Francisco",
+        "C": "Abuja",
+        "D": "Syndey",
         "answer": "Addis Ababa"
     },
 
     {
-        "question13": "How many squares are there on a chess board?",
-        "optionA": "128",
-        "optionB": "64",
-        "optionC": "32",
-        "optionD": "256",
+        "13": "How many squares are there on a chess board?",
+        "A": "128",
+        "B": "64",
+        "C": "32",
+        "D": "256",
         "answer": "64"
     },
 
     {
-        "question14": "Who invented the electric light bulb?",
-        "optionA": "Tom Cruise",
-        "optionB": "Barack Obama",
-        "optionC": "Wole Soyinka",
-        "optionD": "Thomas Edison",
+        "14": "Who invented the electric light bulb?",
+        "A": "Tom Cruise",
+        "B": "Barack Obama",
+        "C": "Wole Soyinka",
+        "D": "Thomas Edison",
         "answer": "Thomas Edison"
     },
 
     {
-        "question15": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "15": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     },
 
     {
-        "question16": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "16": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     },
 
     {
-        "question17": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "17": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     },
 
     {
-        "question18": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "18": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     },
 
     {
-        "question19": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "19": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     },
 
     {
-        "question20": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
+        "20": "What are the first three words of the bible?",
+        "A": "be with everyone",
+        "B": "Again Jesus asked",
+        "C": "In the beginning",
+        "D": "At that time",
         "answer": "In the beginning"
     }
 ]
