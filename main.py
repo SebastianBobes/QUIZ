@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import authentication as auth
+import questions as q
 app = Flask(__name__)
 app.secret_key = 'acwo2024'
 @app.route("/")
@@ -16,7 +17,7 @@ def loggedin_function():
 
 @app.route("/quiz")
 def second_function():
-    return render_template("quiz.html")
+    return render_template("quiz.html", questions=q.read_questions(), answers=q.read_answers(), in_an=q.read_index_and_answers_index())
 
 
 @app.route("/login", methods=['POST', 'GET'])
