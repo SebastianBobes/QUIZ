@@ -4,7 +4,6 @@ import json
 def read_credentials(path: str = "auth.json"):
     with open(path, 'r') as file:
         creds = json.loads(file.read())
-        print(creds)
         return creds
 
 def check_password(username, password):
@@ -33,6 +32,26 @@ def check_score(username):
             else:
                 return True
 
+def read_score(username):
+    creds = read_credentials()
+    for dict in creds:
+        if dict["user"] == username:
+            return dict['score']
+
+def read_start_time(username):
+    creds = read_credentials()
+    for dict in creds:
+        if dict["user"] == username:
+            return dict['starting_time']
+
+def read_end_time(username):
+    creds = read_credentials()
+    for dict in creds:
+        if dict["user"] == username:
+            return dict['submission_time']
+
+
+
 
 def update_starting_time(starting_time,username, path = 'auth.json'):
     creds = read_credentials()
@@ -42,17 +61,18 @@ def update_starting_time(starting_time,username, path = 'auth.json'):
     with open(path, 'w+') as f:
         f.write(json.dumps(creds, indent=4))
 
-
-
+def reset_score_and_time(path = 'auth.json'):
+    creds = read_credentials()
+    for dict in creds:
+        dict["score"]=0
+        dict["starting_time"] = ""
+        dict["submission_time"] = ""
+    with open(path, 'w+') as f:
+        f.write(json.dumps(creds, indent=4))
 
 
 
 
 
 if __name__ == '__main__':
-    user = input("Dati userul:")
-    password=input("Dati parola:")
-    if check_password(user,password)==True:
-        print("corect")
-    else:
-        print("nu")
+   reset_score_and_time()

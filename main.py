@@ -2,19 +2,29 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import authentication as auth
 import questions as q
 from datetime import datetime
+import timer
 app = Flask(__name__)
 app.secret_key = 'acwo2024'
 @app.route("/")
 def first_function():
     return render_template("index.html")
 
+
 @app.route("/loggedin")
 def loggedin_function():
     username = session.get('username')
     if username ==None:
         return render_template("index.html")
-    return render_template('loggedin.html', username=username)
+    if auth.check_score(username) == False:
+        return render_template('loggedin.html', username=username, action="=/submitted")
+    return render_template('loggedin.html', username=username, action="=/quiz")
 
+@app.route("/submitted")
+def submitted_function():
+    username = session.get('username')
+    score = auth.read_score(username)
+    time = timer.calculate_time_difference(auth.read_start_time(username), auth.read_end_time(username))
+    return render_template("submit.html", username=username, score=score, time=time)
 
 @app.route("/quiz")
 def second_function():
@@ -23,7 +33,7 @@ def second_function():
         return render_template('loggedin.html', username=username)
     starting_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     auth.update_starting_time(starting_time=starting_time,username=username)
-    return render_template("quiz.html", questions=q.read_questions(), answers=q.read_answers(), in_an=q.read_index_and_answers_index())
+    return render_template("quiz.html", action="/quiz")
 
 @app.route("/submit", methods=['POST', 'GET'])
 def submit_form():
@@ -37,8 +47,10 @@ def submit_form():
     username = session.get('username')
     submission_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(submission_time)
+    starting_time=auth.read_start_time(username)
+    time = timer.calculate_time_difference(starting_time,submission_time)
     auth.update_score(score=score,submission_time=submission_time,username=username)
-    return render_template('loggedin.html', username=username)
+    return render_template('submit.html', username=username, score=score, time=time)
 
 
 @app.route("/login", methods=['POST', 'GET'])
