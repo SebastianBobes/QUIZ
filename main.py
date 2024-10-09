@@ -24,6 +24,7 @@ def submitted_function():
     username = session.get('username')
     score = auth.read_score(username)
     time = timer.calculate_time_difference(auth.read_start_time(username), auth.read_end_time(username))
+    auth.update_total_time(time,username)
     return render_template("submit.html", username=username, score=score, time=time)
 
 @app.route("/quiz")
@@ -37,20 +38,27 @@ def second_function():
 
 @app.route("/submit", methods=['POST', 'GET'])
 def submit_form():
-    ans_dict={}
-    for i in range(1,21,1):
-        print(request.form.get(f'Q{i}'))
-        ans_dict[f'{i}']=request.form.get(f'Q{i}')
-    print(ans_dict)
-    score = q.read_qa(ans_dict)
-    print(score)
     username = session.get('username')
-    submission_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print(submission_time)
-    starting_time=auth.read_start_time(username)
-    time = timer.calculate_time_difference(starting_time,submission_time)
-    auth.update_score(score=score,submission_time=submission_time,username=username)
-    return render_template('submit.html', username=username, score=score, time=time)
+    if auth.check_time(username):
+        ans_dict = {}
+        for i in range(1, 21, 1):
+            print(request.form.get(f'Q{i}'))
+            ans_dict[f'{i}'] = request.form.get(f'Q{i}')
+        print(ans_dict)
+        score = q.read_qa(ans_dict)
+        print(score)
+        submission_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        print(submission_time)
+        starting_time=auth.read_start_time(username)
+        time = timer.calculate_time_difference(starting_time,submission_time)
+        auth.update_total_time(time,username)
+        auth.update_score(ans_dict=ans_dict,score=score,submission_time=submission_time,username=username)
+        return render_template('submit.html', username=username, score=score, time=time)
+    else:
+        score = auth.read_score(username)
+        time = timer.calculate_time_difference(auth.read_start_time(username), auth.read_end_time(username))
+        auth.update_total_time(time, username)
+        return render_template("submit.html", username=username, score=score, time=time)
 
 
 @app.route("/login", methods=['POST', 'GET'])

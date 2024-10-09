@@ -14,12 +14,13 @@ def check_password(username, password):
                 return True
     return False
 
-def update_score(submission_time,score,username, path = "auth.json"):
+def update_score(ans_dict,submission_time,score,username, path = "auth.json"):
     creds = read_credentials()
     for dict in creds:
         if dict["user"] == username:
             dict["score"] = score
             dict["submission_time"] = submission_time
+            dict["ans_dict"] = ans_dict
     with open(path, 'w+') as f:
         f.write(json.dumps(creds, indent=4))
 
@@ -50,6 +51,14 @@ def read_end_time(username):
         if dict["user"] == username:
             return dict['submission_time']
 
+def check_time(username):
+    creds = read_credentials()
+    for dict in creds:
+        if dict["user"] == username:
+            if dict['submission_time'] =="":
+                return True
+            else:
+                return False
 
 
 
@@ -67,8 +76,20 @@ def reset_score_and_time(path = 'auth.json'):
         dict["score"]=0
         dict["starting_time"] = ""
         dict["submission_time"] = ""
+        dict["total_time"] = ""
+        dict["ans_dict"] = {}
     with open(path, 'w+') as f:
         f.write(json.dumps(creds, indent=4))
+
+def update_total_time(total_time,username, path = 'auth.json'):
+    creds = read_credentials()
+    for dict in creds:
+        if dict["user"] == username:
+            dict["total_time"] = total_time
+    with open(path, 'w+') as f:
+        f.write(json.dumps(creds, indent=4))
+
+
 
 
 
