@@ -24,9 +24,9 @@
     <div class="containerprimul w-container">
       <a href="/" aria-current="page" class="w-nav-brand w--current"><img src="static/images/Logo-Acwo24.png" loading="lazy" width="123" sizes="123px" alt="" srcset="static/images/Logo-Acwo24-p-500.png 500w, static/images/Logo-Acwo24-p-800.png 800w, static/images/Logo-Acwo24.png 1080w" class="logo"></a>
       <nav role="navigation" class="w-nav-menu">
-        <a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a>
+        <a href="/loggedin" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a>
         <a href="#quiz" class="nav-link-2 w-nav-link">Rules</a>
-        <a href="/login" class="nav-link-2 cta w-nav-link">Login</a>
+        <a href="/logout" class="nav-link-2 cta w-nav-link">Logout</a>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -37,7 +37,7 @@
     <div class="w-layout-blockcontainer herocontainer w-container">
       <h1 class="heading-3">AIRCRAFT WORKSHOP 2024</h1>
       <p class="hero-paragraph">Eveniment din cadrul EUROAVIA-Bucuresti dedicat aeromodelismului. Timp de trei zile, vei avea ocazia să înveț concepte teoretice, dar și să-ț construiești propriul aeromodel.</p>
-      <a  class="major-button w-button">Attempt Quiz</a><img src="static/images/MODEL-Brosura-AcWo.png" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 767px) 100vw, (max-width: 991px) 650px, (max-width: 1279px) 100vw, 1100px" srcset="static/images/MODEL-Brosura-AcWo-p-500.png 500w, static/images/MODEL-Brosura-AcWo-p-800.png 800w, static/images/MODEL-Brosura-AcWo-p-1080.png 1080w, static/images/MODEL-Brosura-AcWo-p-1600.png 1600w, static/images/MODEL-Brosura-AcWo.png 2000w" alt="" class="image-3">
+      <a  href {{action}} class="major-button w-button">Attempt Quiz-{{username}}</a><img src="static/images/MODEL-Brosura-AcWo.png" loading="lazy" sizes="(max-width: 479px) 87vw, (max-width: 767px) 100vw, (max-width: 991px) 650px, (max-width: 1279px) 100vw, 1100px" srcset="static/images/MODEL-Brosura-AcWo-p-500.png 500w, static/images/MODEL-Brosura-AcWo-p-800.png 800w, static/images/MODEL-Brosura-AcWo-p-1080.png 1080w, static/images/MODEL-Brosura-AcWo-p-1600.png 1600w, static/images/MODEL-Brosura-AcWo.png 2000w" alt="" class="image-3">
     </div>
   </section>
   <section class="section-16">
@@ -158,56 +158,7 @@
       </div>
     </div>
   </section>
-<!--  <section id="quiz" class="section-10">-->
-<!--    <div class="w-layout-blockcontainer containerprimul w-container">-->
-<!--      <div data-delay="4000" data-animation="slide" class="slider-2 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">-->
-<!--        <div class="mask w-slider-mask">-->
-<!--          <div class="slide w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _1">Quiz Rules</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _1">25 Intrebari</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _1 _3">Timp maxim: 10 Minute</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _4">Pe langa raspunsurile corecte, se va puncta si timpul in care ati terminat.</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading">Scopul este sa il rezolvati impreuna, ca o adevarata echipa.</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _6">Punctajul primit la quiz va fi luat in calcul pentru calcularea punctajului final al echipei.</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="w-slide">-->
-<!--            <div class="w-layout-blockcontainer slidercontainer w-container">-->
-<!--              <h1 class="sliderheading _1">GOOD LUCK!</h1>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="w-slider-arrow-left">-->
-<!--          <div class="icon-3 w-icon-slider-left"></div>-->
-<!--        </div>-->
-<!--        <div class="right-arrow w-slider-arrow-right">-->
-<!--          <div class="icon-3 iconplus w-icon-slider-right"></div>-->
-<!--        </div>-->
-<!--        <div class="slide-nav w-slider-nav w-round w-num"></div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
+
   <section id="quiz" class="section-10">
     <div class="w-layout-blockcontainer containerprimul w-container">
       <div data-delay="4000" data-animation="slide" class="slider-2 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
