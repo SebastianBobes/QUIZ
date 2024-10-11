@@ -3,8 +3,12 @@ import authentication as auth
 import questions as q
 from datetime import datetime
 import timer
+import score_calculator
 app = Flask(__name__)
 app.secret_key = 'acwo2024'
+
+
+
 @app.route("/")
 def first_function():
     return render_template("index.html")
@@ -21,11 +25,13 @@ def loggedin_function():
 
 @app.route("/submitted")
 def submitted_function():
+    score_calculator.calculate_final_score()
+    ranking = score_calculator.read_ranking()
     username = session.get('username')
     score = auth.read_score(username)
     time = timer.calculate_time_difference(auth.read_start_time(username), auth.read_end_time(username))
     auth.update_total_time(time,username)
-    return render_template("submit.html", username=username, score=score, time=time)
+    return render_template("submit.html", username=username, score=score, time=time, ranking=ranking)
 
 @app.route("/quiz")
 def second_function():
@@ -52,13 +58,17 @@ def submit_form():
         starting_time=auth.read_start_time(username)
         time = timer.calculate_time_difference(starting_time,submission_time)
         auth.update_total_time(time,username)
+        score_calculator.calculate_final_score()
+        ranking = score_calculator.read_ranking()
         auth.update_score(ans_dict=ans_dict,score=score,submission_time=submission_time,username=username)
-        return render_template('submit.html', username=username, score=score, time=time)
+        return render_template('submit.html', username=username, score=score, time=time, ranking=ranking)
     else:
         score = auth.read_score(username)
         time = timer.calculate_time_difference(auth.read_start_time(username), auth.read_end_time(username))
         auth.update_total_time(time, username)
-        return render_template("submit.html", username=username, score=score, time=time)
+        score_calculator.calculate_final_score()
+        ranking = score_calculator.read_ranking()
+        return render_template("submit.html", username=username, score=score, time=time, ranking=ranking)
 
 
 @app.route("/login", methods=['POST', 'GET'])

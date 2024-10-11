@@ -77,6 +77,7 @@ def reset_score_and_time(path = 'auth.json'):
         dict["starting_time"] = ""
         dict["submission_time"] = ""
         dict["total_time"] = ""
+        dict["final_score"] = 0
         dict["ans_dict"] = {}
     with open(path, 'w+') as f:
         f.write(json.dumps(creds, indent=4))
